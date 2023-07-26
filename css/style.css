@@ -440,12 +440,42 @@ img {
 
 .work-item {
   width: calc((100% - 48px) / 3);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--cornflower);
+}
+
+.overlay {
+  color: var(--cloud);
+  background-color: var(--iris);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300px;
+  width: 100%;
+  padding: 40px 32px;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.work-item:hover {
+  border: 1px solid var(--cloud);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.work-item:hover .overlay {
+  transform: translateY(0);
 }
 
 .work-desc {
   padding: 32px 16px;
-  border: 1px solid var(--cornflower);
+
+  background-color: var(--white);
   border-top: none;
+  position: relative;
+  z-index: 999;
 }
 
 /* FOOTER*/
