@@ -8,6 +8,7 @@
   --dairy: #fcfcfc;
   --white: #ffffff;
   --grey: #2e2f42;
+  --navyblue-modal: rgba(46, 47, 66, 0.4);
   --cloud: #f4f4fd;
   --cornflower: #e7e9fc;
   --light-slat: #8e8f99;
@@ -105,7 +106,8 @@ img {
 
 /* Hiding elements */
 
-.visually-hidden {
+.visually-hidden,
+.is-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -115,6 +117,14 @@ img {
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
   overflow: hidden;
 }
 
@@ -154,42 +164,31 @@ img {
 .header-nav-list {
   display: flex;
   gap: 40px;
+  padding-top: 24px;
 }
 
+.header-nav-item,
 .current {
-}
-
-.header-nav-item {
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
   color: var(--navyblue);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  transition-property: color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-nav-item::before {
-  width: 100%;
-  height: 4px;
-  background-color: var(--white);
-  border-radius: 2px;
-  content: '';
+.current {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
 }
 
-.header-nav-item::after {
+.current::after {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--white);
-  content: '';
-}
-
-.header-nav-item:hover::after,
-.header-nav-item:focus::after {
   background-color: var(--ocean);
+  content: '';
 }
 
 .header-nav-item:hover,
@@ -213,7 +212,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   padding: 24px 0;
-  transition-property: color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-item:hover,
@@ -250,12 +249,52 @@ img {
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
-  transition-property: background-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-button:hover,
 .main-button:focus {
   background-color: var(--ocean);
+}
+
+.data-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--navyblue-modal);
+  padding-top: 80px;
+  padding-bottom: 8px;
+}
+
+.modal-card {
+  width: 408px;
+  height: 584px;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 24px;
+  background: var(--dairy);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+
+.data-modal-close {
+  background-color: var(--cornflower);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding-bottom: 2px;
+  width: 24px;
+  height: 24px;
+  margin-left: 360px;
+  cursor: pointer;
+  display: block;
+}
+
+.data-modal-close .icon {
+  width: 8px;
+  height: 8px;
+  fill: var(--navyblue);
 }
 
 /*Feature section*/
@@ -343,7 +382,7 @@ img {
   background-color: var(--iris);
   border-radius: 100%;
   padding: 12px;
-  transition-property: background-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-desc-social-item:hover,
@@ -374,7 +413,7 @@ img {
   padding: 16px 32px;
   border-radius: 4px;
   border: 1px solid var(--light-slat);
-  transition-property: border;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-item:hover,
@@ -386,7 +425,7 @@ img {
   width: 104px;
   height: 56px;
   fill: var(--light-slat);
-  transition-property: fill;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-item .icon:hover,
@@ -414,7 +453,9 @@ img {
   border-radius: 4px;
   border: 1px solid var(--cornflower);
   padding: 12px 24px;
-  transition-property: background-color, color, border;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-button:hover,
@@ -536,7 +577,7 @@ img {
   background-color: var(--iris);
   border-radius: 50%;
   padding: 8px;
-  transition-property: background-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-item:hover,

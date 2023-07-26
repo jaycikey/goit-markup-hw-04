@@ -27,9 +27,11 @@
           <a href="./index.html" class="logo link"
             >Web<span class="logo-second">Studio</span>
           </a>
-          <ul class="header-nav-list list link">
+          <ul class="header-nav-list list">
             <li>
-              <a href="./index.html" class="header-nav-item link">Studio</a>
+              <a href="./index.html" class="header-nav-item link current"
+                >Studio</a
+              >
             </li>
             <li>
               <a href="./portfolio.html" class="header-nav-item link"
@@ -59,9 +61,28 @@
       <section class="main-section">
         <div class="container">
           <h1 class="main-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="main-button">Order Service</button>
+          <button
+            type="button"
+            data-modal-open
+            class="data-modal-open main-button"
+          >
+            Order Service
+          </button>
         </div>
-        <div></div>
+        <div data-modal class="data-modal is-hidden">
+          <div class="modal-card">
+            <button
+              class="data-modal-close"
+              type="button"
+              data-modal-close
+              aria-label="Close modal"
+            >
+              <svg class="icon">
+                <use href="./svg/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
       <section class="feature">
         <div class="container">
@@ -70,7 +91,7 @@
             <li class="feature-item">
               <div class="icon-container">
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-strategy"></use>
+                  <use href="./svg/icons.svg#icon-strategy"></use>
                 </svg>
               </div>
               <h3 class="title-three">Strategy</h3>
@@ -82,7 +103,7 @@
             <li class="feature-item">
               <div class="icon-container">
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-punctuality"></use>
+                  <use href="./svg/icons.svg#icon-punctuality"></use>
                 </svg>
               </div>
               <h3 class="title-three">Punctuality</h3>
@@ -94,7 +115,7 @@
             <li class="feature-item">
               <div class="icon-container">
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-diligence"></use>
+                  <use href="./svg/icons.svg#icon-diligence"></use>
                 </svg>
               </div>
               <h3 class="title-three">Diligence</h3>
@@ -106,7 +127,7 @@
             <li class="feature-item">
               <div class="icon-container">
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-technologies"></use>
+                  <use href="./svg/icons.svg#icon-technologies"></use>
                 </svg>
               </div>
               <h3 class="title-three">Technologies</h3>
@@ -149,30 +170,46 @@
                 <p class="text">Product Designer</p>
                 <ul class="team-desc-social-list list">
                   <li class="team-desc-social-item">
-                    <a href="https://instagram.com" target="_blank">
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      aria-label="instagram"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-instagram"></use>
+                        <use href="./svg/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-desc-social-item">
-                    <a href="https://twitter.com" target="_blank">
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      aria-label="twitter"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-twitter"></use>
+                        <use href="./svg/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-desc-social-item">
-                    <a href="https://facebook.com" target="_blank">
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      aria-label="facebook"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-facebook"></use>
+                        <use href="./svg/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-desc-social-item">
-                    <a href="https://linkedin.com/" target="_blank">
+                    <a
+                      href="https://linkedin.com/"
+                      target="_blank"
+                      aria-label="linkedin"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-linkedin"></use>
+                        <use href="./svg/icons.svg#icon-linkedin"></use>
                       </svg>
                     </a>
                   </li>
@@ -190,30 +227,46 @@
                 <p class="text">Frontend Developer</p>
                 <ul class="team-desc-social-list list">
                   <li class="team-desc-social-item">
-                    <a href="https://instagram.com" target="_blank">
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      aria-label="instagram"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-instagram"></use>
+                        <use href="./svg/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-desc-social-item">
-                    <a href="https://twitter.com" target="_blank">
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      aria-label="twitter"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-twitter"></use>
+                        <use href="./svg/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-desc-social-item">
-                    <a href="https://facebook.com" target="_blank">
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      aria-label="facebook"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-facebook"></use>
+                        <use href="./svg/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-desc-social-item">
-                    <a href="https://linkedin.com/" target="_blank">
+                    <a
+                      href="https://linkedin.com/"
+                      target="_blank"
+                      aria-label="linkedin"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-linkedin"></use>
+                        <use href="./svg/icons.svg#icon-linkedin"></use>
                       </svg>
                     </a>
                   </li>
@@ -231,30 +284,46 @@
                 <p class="text">Marketing</p>
                 <ul class="team-desc-social-list list">
                   <li class="team-desc-social-item">
-                    <a href="https://instagram.com" target="_blank">
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      aria-label="instagram"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-instagram"></use>
+                        <use href="./svg/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-desc-social-item">
-                    <a href="https://twitter.com" target="_blank">
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      aria-label="twitter"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-twitter"></use>
+                        <use href="./svg/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-desc-social-item">
-                    <a href="https://facebook.com" target="_blank">
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      aria-label="facebook"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-facebook"></use>
+                        <use href="./svg/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-desc-social-item">
-                    <a href="https://linkedin.com/" target="_blank">
+                    <a
+                      href="https://linkedin.com/"
+                      target="_blank"
+                      aria-label="linkedin"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-linkedin"></use>
+                        <use href="./svg/icons.svg#icon-linkedin"></use>
                       </svg>
                     </a>
                   </li>
@@ -272,30 +341,46 @@
                 <p class="text">UI Designer</p>
                 <ul class="team-desc-social-list list">
                   <li class="team-desc-social-item">
-                    <a href="https://instagram.com" target="_blank">
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      aria-label="instagram"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-instagram"></use>
+                        <use href="./svg/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-desc-social-item">
-                    <a href="https://twitter.com" target="_blank">
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      aria-label="twitter"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-twitter"></use>
+                        <use href="./svg/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-desc-social-item">
-                    <a href="https://facebook.com" target="_blank">
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      aria-label="facebook"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-facebook"></use>
+                        <use href="./svg/icons.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="team-desc-social-item">
-                    <a href="https://linkedin.com/" target="_blank">
+                    <a
+                      href="https://linkedin.com/"
+                      target="_blank"
+                      aria-label="linkedin"
+                    >
                       <svg class="icon">
-                        <use href="./svg/spite.svg#icon-linkedin"></use>
+                        <use href="./svg/icons.svg#icon-linkedin"></use>
                       </svg>
                     </a>
                   </li>
@@ -310,44 +395,44 @@
           <h2 class="title-two">Customer</h2>
           <ul class="customer-list list">
             <li class="customer-item">
-              <a href="" target="_blank">
+              <a href="" target="_blank" aria-label="customer-1">
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-customer-1"></use>
+                  <use href="./svg/icons.svg#icon-customer-1"></use>
                 </svg>
               </a>
             </li>
             <li class="customer-item">
-              <a href="" target="_blank">
+              <a href="" target="_blank" aria-label="customer-2">
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-customer-2"></use>
+                  <use href="./svg/icons.svg#icon-customer-2"></use>
                 </svg>
               </a>
             </li>
             <li class="customer-item">
-              <a href="" target="_blank">
+              <a href="" target="_blank" aria-label="customer-3">
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-customer-3"></use>
+                  <use href="./svg/icons.svg#icon-customer-3"></use>
                 </svg>
               </a>
             </li>
             <li class="customer-item">
-              <a href="" target="_blank">
+              <a href="" target="_blank" aria-label="customer-4">
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-customer-4"></use>
+                  <use href="./svg/icons.svg#icon-customer-4"></use>
                 </svg>
               </a>
             </li>
             <li class="customer-item">
-              <a href="" target="_blank">
+              <a href="" target="_blank" aria-label="customer-5">
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-customer-5"></use>
+                  <use href="./svg/icons.svg#icon-customer-5"></use>
                 </svg>
               </a>
             </li>
             <li class="customer-item">
-              <a href="" target="_blank">
+              <a href="" target="_blank" aria-label="customer-6">
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-customer-6"></use>
+                  <use href="./svg/icons.svg#icon-customer-6"></use>
                 </svg>
               </a>
             </li>
@@ -370,30 +455,46 @@
           <p class="footer-text-second">Social media</p>
           <ul class="footer-social-list list">
             <li class="footer-social-item">
-              <a href="https://instagram.com" target="_blank">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                aria-label="Instagram"
+              >
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-instagram"></use>
+                  <use href="./svg/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-social-item">
-              <a href="https://twitter.com" target="_blank">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                aria-label="Twitter"
+              >
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-twitter"></use>
+                  <use href="./svg/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-social-item">
-              <a href="https://facebook.com" target="_blank">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                aria-label="facebook"
+              >
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-facebook"></use>
+                  <use href="./svg/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-social-item">
-              <a href="https://linkedin.com" target="_blank">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                aria-label="linkedin"
+              >
                 <svg class="icon">
-                  <use href="./svg/spite.svg#icon-linkedin"></use>
+                  <use href="./svg/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
@@ -401,5 +502,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
