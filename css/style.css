@@ -280,7 +280,7 @@ img {
   justify-content: center;
 }
 
-.feature-item svg {
+.icon-container svg {
   width: 64px;
   height: 64px;
   margin: 24px 100px;
@@ -337,6 +337,11 @@ img {
   gap: 24px;
 }
 
+.team-desc-social-item {
+  width: 40px;
+  width: 40px;
+}
+
 .team-desc-social-link {
   padding: 12px;
   width: 100%;
@@ -354,7 +359,7 @@ img {
   background-color: var(--ocean);
 }
 
-.team-desc-social-link svg {
+.social-icon {
   width: 16px;
   height: 16px;
   fill: var(--cloud);
@@ -369,6 +374,11 @@ img {
 .customer-list {
   display: flex;
   gap: 24px;
+}
+
+.customer-list-item {
+  width: calc((100% - 120px) / 6);
+  height: 88px;
 }
 
 .customer-list-link {
@@ -391,7 +401,7 @@ img {
   color: var(--ocean);
 }
 
-.customer-list-link svg {
+.customer-icon {
   width: 104px;
   height: 56px;
   fill: currentColor;
@@ -417,10 +427,6 @@ img {
   border-radius: 4px;
   border: 1px solid var(--cornflower);
   padding: 12px 24px;
-  transition: transition зі значенням color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-button:hover,
@@ -437,6 +443,13 @@ img {
   justify-content: center;
   gap: 24px;
   margin-bottom: 72px;
+}
+
+.filter-item {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-list {
@@ -474,14 +487,16 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work-list-link:hover {
+.work-list-link:hover,
+.work-list-link:focus {
   border: 1px solid var(--cloud);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.work-list-link:hover .work-list-overlay {
+.work-list-link:hover .work-list-overlay,
+.work-list-link:focus .work-list-overlay {
   transform: translateY(0%);
 }
 
@@ -547,6 +562,11 @@ img {
   gap: 16px;
 }
 
+.footer-social-item {
+  width: 40px;
+  height: 40px;
+}
+
 .footer-social-link {
   display: flex;
   align-items: center;
@@ -564,7 +584,7 @@ img {
   background-color: var(--green);
 }
 
-.footer-social-link svg {
+.footer-social-icon {
   width: 24px;
   height: 24px;
   fill: var(--cloud);
@@ -595,7 +615,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   border-radius: 4px;
   padding-top: 24px;
   background: var(--dairy);
@@ -622,7 +642,7 @@ img {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.data-modal-close svg {
+.close-modal-icon {
   width: 8px;
   height: 8px;
   fill: var(--navyblue);
